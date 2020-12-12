@@ -1,5 +1,5 @@
 <template>
-  <div class="text-light-onSurface">
+  <div class="">
     <div class="px-6 md:px-0 max-w-screen-md mx-auto mt-20 md:mt-40">
       <!-- bullets -->
       <p class="text-center font-bold text:base md:text-lg opacity-50">

@@ -1,22 +1,19 @@
 <template>
-  <div class="min-h-screen bg-gray-50 w-full pt-16 pb-64 text-light-onSurface font-sans">
-    <AppNavigation />
-    <AppLandingIntro/>
-    <AppOffers/>
+  <div class="min-h-screen w-full   font-sans">
+    <HomeIntro/>
+    <HomeOffers/>
   </div>
 </template>
 
 <script>
-import AppNavigation from "~/components/common/AppNavigation.vue";
-import AppLandingIntro from '~/components/home/AppLandingIntro.vue';
-import AppOffers from '~/components/home/AppOffers.vue';
+import HomeIntro from '~/components/home/HomeIntro.vue';
+import HomeOffers from '~/components/home/HomeOffers.vue';
 
 export default {
   name: "App",
   components: {
-    AppNavigation,
-    AppLandingIntro,
-    AppOffers,
+    HomeIntro,
+    HomeOffers,
   },
 };
 </script>
