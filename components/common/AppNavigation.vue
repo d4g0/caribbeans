@@ -23,7 +23,7 @@
           <li>
             <nuxt-link
               :to="localePath('/')"
-              class="p-1 rounded-md opacity-70 hover:opacity-100 hover:bg-gray-100 transition-all duration-100"
+              class="py-1 px-2 rounded-md opacity-70 hover:opacity-100 hover:bg-gray-100 transition-all duration-100"
               >Home</nuxt-link
             >
           </li>
@@ -31,14 +31,14 @@
             <nuxt-link
               :to="localePath('works')"
               href=""
-              class="p-1 rounded-md opacity-70 hover:opacity-100 hover:bg-gray-100 transition-all duration-100"
+              class="py-1 px-2 rounded-md opacity-70 hover:opacity-100 hover:bg-gray-100 transition-all duration-100"
               >{{ $t("common.navigation.works") }}</nuxt-link
             >
           </li>
           <li>
             <nuxt-link
               :to="localePath('contact')"
-              class="p-1 rounded-md opacity-70 hover:opacity-100 hover:bg-gray-100 transition-all duration-100"
+              class="py-1 px-2 rounded-md opacity-70 hover:opacity-100 hover:bg-gray-100 transition-all duration-100"
               >{{$t('common.navigation.contact_us')}}</nuxt-link
             >
           </li>
