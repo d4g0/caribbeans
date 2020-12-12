@@ -1,0 +1,31 @@
+{
+  "name": "womy",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "start:prod": "yarn build && yarn start",
+    "analyze": "yarn nuxt build -a"
+  },
+  "dependencies": {
+    "@mojs/core": "^0.288.2",
+    "@vue/composition-api": "^1.0.0-beta.20",
+    "@vueuse/core": "^4.0.0-rc.3",
+    "animate.css": "^4.1.1",
+    "autoprefixer": "^10.0.2",
+    "core-js": "^3.6.5",
+    "gsap": "^3.5.1",
+    "install": "^0.13.0",
+    "nuxt": "^2.14.6",
+    "nuxt-i18n": "^6.16.0",
+    "polymorph-js": "^1.0.2",
+    "postcss": "^8.1.10",
+    "tailwindcss": "^2.0.1"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^3.1.0"
+  }
+}
