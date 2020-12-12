@@ -6,6 +6,9 @@ module.exports = {
 
     }
   },
+  
+  darkMode: false, // or 'media' or 'class'
+
   theme: {
 
     extend: {
@@ -46,44 +49,21 @@ module.exports = {
         '144': '36rem',
         '216': '54rem'
       },
+      // -------
+      // COLORS
+      // -------
       colors: {
-
-        womy: {
-          darkBlue: '#0B2A4A',
-          orange: '#FD8204'
-        },
-
-        vercel: {
-          lightGray: '#fafafa',
-          borderGray: '#eaeaea',
-        },
-
-        proposal: {
-          green: '#097F7C'
-        },
-
-        surface: {
-          dimmed: '#6e6d7a',
-          base: '#0d0c22',
-          lightGray: '#f3f3f3',
-          DEFAULT: 'f0f0f0',
-
-        },
-
         light: {
           onSurface: '#304a5f',
-          surface: '#f8fafc',
-          elevatedSurface: '#e1e7ef',
-          dimmed: '#6e6d7a',
-          semi: '#3d3e3e96'
+          primary: '#0B2A4A'
         },
         gray: colors.blueGray,
-        cyan: colors.cyan,
-        fuchsia: colors.fuchsia,
-        emerald: colors.emerald,
-        amber: colors.amber,
-        orange: colors.orange
+        ...colors
       },
+
+      // ---------------
+      // BORDER - RADIUS
+      // ---------------
       borderRadius: {
         kush: '1.2rem',
         og: '8px'
