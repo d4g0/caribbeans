@@ -1,10 +1,10 @@
 <template>
   <div class="">
-    <div class="relative z-40">
+    <div class="relative ">
         <!-- @click="toogleOpen" -->
       <button
         @click="toogleSwitch()"
-        class="p-2 rounded-lg border bg-white hover:bg-gray-100 focus:outline-none focus-within:outline-white focus-within:ring-2"
+        class="relative z-20 p-2 rounded-lg border bg-white hover:bg-gray-100 focus:outline-none focus-within:outline-white focus-within:ring-2"
       >
         <svg
           width="24"
@@ -27,7 +27,7 @@
       <transition name="fade-from-bottom">
         <div
           v-if="isSwitchOpen"
-          class="absolute bottom-12 left-0 bg-white border rounded-md py-2 px-4 shadow-md"
+          class="absolute z-20 bottom-12 left-0 bg-white border rounded-md py-2 px-4 shadow-md"
         >
           <nuxt-link
             class="hover:bg-gray-100 block py-1 px-2 rounded-lg text-sm"
@@ -44,8 +44,8 @@
     <transition name="fade">
       <div
         v-if="isSwitchOpen"
-        @click="toogleSwitch('close')"
-        class="bg-teal-2000 fixed z-30 inset-0"
+        @click.stop="toogleSwitch('close')"
+        class="bg-teal-2000 fixed z-10 inset-0"
       ></div>
     </transition>
   </div>
