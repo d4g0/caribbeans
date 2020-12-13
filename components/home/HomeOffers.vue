@@ -1,25 +1,25 @@
 <template>
   <div class="mt-32 max-w-screen-lg mx-auto px-6 xl:px-0">
-    <div class=" text-center">
-      <h2 class="font-bold text-3xl ">We ship</h2>
+    <section class=" text-center">
+      <h1 class="font-bold text-3xl ">We ship</h1>
       <ul
         class="mt-10 md:mt-16 space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-9 lg:grid-cols-3"
       >
         <li
           v-for="item in state.offers"
           :key="item.title"
-          class="bg-white p-2 rounded-kush shadow-sm"
+          class="bg-white px-2 py-4 rounded-kush shadow-sm"
         >
           <HomeOfferItem :item="item" />
         </li>
       </ul>
       
-    </div>
+    </section>
   </div>
 </template>
 
 <script>
-import HomeOfferItem from "./HomeOfferItem.vue";
+import HomeOfferItem from "~/components/home/HomeOfferItem.vue";
 import { reactive, toRef } from "@vue/composition-api";
 
 export default {
@@ -148,8 +148,8 @@ export default {
             />
           </svg>
           `,
-          content: `We are happy to help our clients maintain
-           secure and smooth their infrastructure in this ever 
+          content: `We are happy to help our clients maintain a
+           secure and smooth infrastructure in this ever 
            changing technical landscape.`,
         },
       ],

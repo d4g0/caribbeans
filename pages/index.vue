@@ -1,19 +1,22 @@
 <template>
-  <div class="min-h-screen w-full  font-sans">
-    <HomeIntro/>
-    <HomeOffers/>
+  <div class="min-h-screen w-full font-sans">
+    <HomeIntro />
+    <HomeOffers />
+    <HomeWorks/>
   </div>
 </template>
 
 <script>
-import HomeIntro from '~/components/home/HomeIntro.vue';
-import HomeOffers from '~/components/home/HomeOffers.vue';
+import HomeIntro from "~/components/home/HomeIntro.vue";
+import HomeOffers from "~/components/home/HomeOffers.vue";
+import HomeWorks from "~/components/home/HomeWorks.vue";
 
 export default {
   name: "App",
   components: {
     HomeIntro,
     HomeOffers,
+    HomeWorks,
   },
 };
 </script>
@@ -22,7 +25,7 @@ export default {
 .font-pacifico {
   font-family: Pacifico;
 }
-.font-dm-mono{
-  font-family: 'DM Mono';
+.font-dm-mono {
+  font-family: "DM Mono";
 }
 </style>
