@@ -47,7 +47,18 @@ html {
 
 .fade-from-left-enter, .fade-from-left-leave-to {
     opacity: 0;
-    margin-left: -5rem;
+    transform: translate3d(-5rem, 0, 0);
+}
+
+/* fade-from-bottom */
+
+.fade-from-bottom-enter-active, .fade-from-bottom-leave-active {
+    transition: all 0.25s;
+}
+
+.fade-from-bottom-enter, .fade-from-bottom-leave-to {
+    opacity: 0;
+    transform: translate3d(0, 2rem, 0);
 }
 
 /* PAGE */
@@ -59,8 +70,6 @@ html {
 .page-enter, .page-leave-to {
     opacity: 0;
 }
-
-
 
 /* Layout */
 

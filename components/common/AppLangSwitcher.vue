@@ -1,9 +1,10 @@
 <template>
   <div class="">
+
     <div class="relative z-40">
       <button
         @click="toogleOpen"
-        class="p-2 rounded-lg border hover:bg-gray-100 focus:outline-none focus-within:outline-white focus-within:ring-2"
+        class="p-2 rounded-lg border bg-white hover:bg-gray-100 focus:outline-none focus-within:outline-white focus-within:ring-2"
       >
         <svg
           width="24"
@@ -22,13 +23,13 @@
         </svg>
       </button>
 
-      <transition name="fade">
+      <!-- language options -->
+      <transition name="fade-from-bottom">
         <div
           v-if="isOpen"
-          class="bg-white border rounded-md py-2 px-4 absolute bottom-12 left-0 shadow-md"
+          class=" absolute bottom-12 left-0  bg-white border rounded-md py-2 px-4   shadow-md"
         >
           <nuxt-link
-            
             class="hover:bg-gray-100 block py-1 px-2 rounded-lg text-sm"
             v-for="locale in availableLocales"
             :key="locale.code"
@@ -39,12 +40,9 @@
       </transition>
     </div>
 
+    <!-- overlay -->
     <transition name="fade">
-      <div
-        v-if="isOpen"
-        @click="toogleOpen('close')"
-        class="fixed z-30 inset-0"
-      ></div>
+      <div v-if="isOpen" @click="onClick" class="bg-teal-2000 fixed z-30 inset-0" ></div>
     </transition>
   </div>
 </template>
@@ -76,9 +74,15 @@ export default {
       isOpen.value = !isOpen.value;
     }
 
+    function onClick(){
+        console.log('click')
+        toogleOpen('close')
+    }
+    
     return {
       isOpen,
       toogleOpen,
+      onClick
     };
   },
 };
