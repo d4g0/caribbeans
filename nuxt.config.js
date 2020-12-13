@@ -88,7 +88,10 @@ export default {
   build: {
   },
   generate: {
-    dir:'docs'
+    dir: 'docs'
+  },
+  router: {
+    base: '/caribbeans/'
   },
   target: 'static'
   // server: {
