@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen w-full   font-sans">
+  <div class="min-h-screen w-full  font-sans">
     <HomeIntro/>
     <HomeOffers/>
   </div>

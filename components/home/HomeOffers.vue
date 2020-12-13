@@ -10,7 +10,7 @@
           :key="item.title"
           class="bg-white p-2 rounded-kush shadow-sm"
         >
-          <AppOfferItem :item="item" />
+          <HomeOfferItem :item="item" />
         </li>
       </ul>
       
@@ -19,12 +19,12 @@
 </template>
 
 <script>
-import AppOfferItem from "./AppOfferItem.vue";
+import HomeOfferItem from "./HomeOfferItem.vue";
 import { reactive, toRef } from "@vue/composition-api";
 
 export default {
   components: {
-    AppOfferItem,
+    HomeOfferItem,
   },
   setup() {
     const state = reactive({

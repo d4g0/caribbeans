@@ -7,8 +7,8 @@
         </div>
       </div>
       <div class="ml-4">
-        <h1 class="font-medium text-xl ">{{ item.title }}</h1>
-        <p v-html="item.content" class="mt-1 text-sm">
+        <h1 class="font-medium text-xl leading-tight">{{ item.title }}</h1>
+        <p v-html="item.content" class="mt-2 text-sm">
         </p>
       </div>
     </article>
