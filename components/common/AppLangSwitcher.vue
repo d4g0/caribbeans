@@ -1,9 +1,9 @@
 <template>
   <div class="">
-
     <div class="relative z-40">
+        <!-- @click="toogleOpen" -->
       <button
-        @click="toogleOpen"
+        @click="toogleSwitch()"
         class="p-2 rounded-lg border bg-white hover:bg-gray-100 focus:outline-none focus-within:outline-white focus-within:ring-2"
       >
         <svg
@@ -26,8 +26,8 @@
       <!-- language options -->
       <transition name="fade-from-bottom">
         <div
-          v-if="isOpen"
-          class=" absolute bottom-12 left-0  bg-white border rounded-md py-2 px-4   shadow-md"
+          v-if="isSwitchOpen"
+          class="absolute bottom-12 left-0 bg-white border rounded-md py-2 px-4 shadow-md"
         >
           <nuxt-link
             class="hover:bg-gray-100 block py-1 px-2 rounded-lg text-sm"
@@ -42,49 +42,32 @@
 
     <!-- overlay -->
     <transition name="fade">
-      <div v-if="isOpen" @click="onClick" class="bg-teal-2000 fixed z-30 inset-0" ></div>
+      <div
+        v-if="isSwitchOpen"
+        @click="toogleSwitch('close')"
+        class="bg-teal-2000 fixed z-30 inset-0"
+      ></div>
     </transition>
   </div>
 </template>
 
 <script>
-import { ref } from "@vue/composition-api";
+import { mapGetters, mapMutations } from "vuex";
+import { computed, ref } from "@vue/composition-api";
 export default {
   computed: {
     availableLocales() {
       return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale);
     },
+    ...mapGetters("lang/", ["isSwitchOpen"]),
+  },
+  methods: {
+    ...mapMutations("lang/", ["toogleSwitch"]),
   },
 
-  setup() {
-    const isOpen = ref(false);
-
-    function toogleOpen(action = null) {
-      // open || close
-      if (action !== null) {
-        if (action === "open") {
-          isOpen.value = true;
-          return;
-        }
-        if (action === "close") {
-          isOpen.value = false;
-          return;
-        }
-      }
-      isOpen.value = !isOpen.value;
-    }
-
-    function onClick(){
-        console.log('click')
-        toogleOpen('close')
-    }
-    
-    return {
-      isOpen,
-      toogleOpen,
-      onClick
-    };
-  },
+  // setup() {
+   
+  // },
 };
 </script>
 

@@ -1,21 +1,21 @@
 export const state = () => ({
-    value: 'myvalue'
+    // value: 'myvalue'
 })
 
 export const getters = {
-    getterValue: state => {
-        return state.value
-    }
+    // getterValue: state => {
+    //     return state.value
+    // }
 }
 
 export const mutations = {
-    updateValue: (state, payload) => {
-        state.value = payload
-    }
+    // updateValue: (state, payload) => {
+    //     state.value = payload
+    // }
 }
 
 export const actions = {
-    updateActionValue({ commit }) {
-        commit('updateValue', payload)
-    }
+    // updateActionValue({ commit }) {
+    //     commit('updateValue', payload)
+    // }
 }
