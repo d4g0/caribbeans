@@ -1,1 +1,0 @@
-window.__NUXT__=(function(a){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1607896051",layout:"default",error:null,state:{lang:{switchIsOpen:a},ui:{uiState:{navOpen:a}},i18n:{routeParams:{}}},serverRendered:true,routePath:"\u002Fcontact",config:{},__i18n:{langs:{en:{common:{navigation:{home:"Home",works:"Works",contact_us:"Contact Us"}}}}}}}(false));
