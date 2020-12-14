@@ -93,7 +93,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
 
 .bg-blured-white {
     background: rgba(255, 255, 255, 0.705);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(15px);
 }
 
 .native-bounce {

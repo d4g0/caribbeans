@@ -1,7 +1,7 @@
 <template>
   <div class="text-light-onSurface">
     <header
-      class="bg-white border-b h-16 fixed z-30 top-0 right-0 w-full flex items-center"
+      class="bg-blured-white border-b h-16 fixed z-30 top-0 right-0 w-full flex items-center"
     >
       <nav
         class="flex-1 flex items-baseline max-w-screen-lg mx-auto px-6 xl:px-0 justify-between"

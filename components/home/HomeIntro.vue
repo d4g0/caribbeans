@@ -19,12 +19,12 @@
       </p>
 
       <div class="mt-16 text-center ">
-        <a
-          href="#"
+        <nuxt-link
+          :to="localePath('/#')"
           class="inline-block py-4 px-6 border rounded-kush bg-light-primary text-gray-50 focus-within:ring-2 focus:ring-gray-400 focus:outline-white"
         >
           {{ $t("home.intro.cta_0") }}
-        </a>
+        </nuxt-link>
       </div>
     </div>
   </div>
