@@ -32,13 +32,13 @@ export default {
       let offers = this.$t("home.offers.items");
       offers = offers.map((offer) => ({
         ...offer,
-        icon: this.icons[`${offer.icon}`],
+        icon: this.icons[offer.icon],
       }));
       return offers;
     },
   },
   mounted() {
-    console.log(this.$t("home.offers.items"));
+    // console.log(this.$t("home.offers.items"));
   },
   setup() {
     const state = reactive({
