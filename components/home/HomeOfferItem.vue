@@ -8,7 +8,7 @@
       </div>
       <div class="ml-4">
         <h1 class="font-medium text-xl leading-tight">{{ item.title }}</h1>
-        <p v-html="item.content" class="mt-2 text-sm">
+        <p v-html="item.body" class="mt-2 text-sm">
         </p>
       </div>
     </article>
@@ -39,7 +39,7 @@ export default {
             />
           </svg>
           `,
-          content: `We don't like our costumers wait for us. 
+          body: `We don't like our costumers wait for us. 
           So we provide world class performance <strong>metrics</strong>.`,
         };
       },

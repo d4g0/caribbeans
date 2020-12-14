@@ -3,26 +3,28 @@
     <div class="px-6 md:px-0 max-w-screen-md mx-auto mt-20 md:mt-40">
       <!-- bullets -->
       <p class="text-center font-bold text:base md:text-lg opacity-50">
-        <span> Design </span>
+        <span> {{ $t("home.intro.bulleted.design") }} </span>
         <span>&bull;</span>
-        <span> Development </span>
+        <span> {{ $t("home.intro.bulleted.development") }} </span>
         <span>&bull;</span>
-        <span> Support</span>
+        <span> {{ $t("home.intro.bulleted.support") }}</span>
       </p>
       <!-- heading -->
       <h1 class="mt-4 font-bold text-3xl lg:text-7xl text-center">
-        We make websites for local businesses
+        {{ $t("home.intro.heading") }}
       </h1>
 
       <p class="mt-6 md:mt-20 text-sm text-center max-w-md mx-auto opacity-80">
-        We believe that the screen of our costumers it's
-        one of the more important places on the planet.
-        We plan, design and build a to deliver a
-        delightful experience. 
+        {{ $t("home.intro.description") }}
       </p>
 
-      <div class="mt-16 text-center">
-        <button class="py-4 px-6 border rounded-kush bg-light-primary text-gray-50">Let's Build Something</button>
+      <div class="mt-16 text-center ">
+        <a
+          href="#"
+          class="inline-block py-4 px-6 border rounded-kush bg-light-primary text-gray-50 focus-within:ring-2 focus:ring-gray-400 focus:outline-white"
+        >
+          {{ $t("home.intro.cta_0") }}
+        </a>
       </div>
     </div>
   </div>

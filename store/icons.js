@@ -1,52 +1,7 @@
-<template>
-  <div class="mt-32 max-w-screen-lg mx-auto px-6 xl:px-0">
-    <section class="text-center">
-      <h1 class="font-bold text-3xl">{{$t('home.offers.title')}}</h1>
-      <ul
-        class="mt-10 md:mt-16 space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-4 lg:grid-cols-3"
-      >
-        <li
-          v-for="item in offers"
-          :key="item.title"
-          class="bg-white pl-2 pr-4 py-5 rounded-kush shadow-sm"
-        >
-          <HomeOfferItem :item="item" />
-        </li>
-      </ul>
-    </section>
-  </div>
-</template>
 
-<script>
-import HomeOfferItem from "~/components/home/HomeOfferItem.vue";
-import { reactive, toRef } from "@vue/composition-api";
-import { mapState } from "vuex";
-
-export default {
-  components: {
-    HomeOfferItem,
-  },
-  computed: {
-    ...mapState("icons/", ["icons"]),
-    offers() {
-      let offers = this.$t("home.offers.items");
-      offers = offers.map((offer) => ({
-        ...offer,
-        icon: this.icons[`${offer.icon}`],
-      }));
-      return offers;
-    },
-  },
-  mounted() {
-    console.log(this.$t("home.offers.items"));
-  },
-  setup() {
-    const state = reactive({
-      offers: [
-        {
-          title: "Blazing fast speed",
-          icon: `
-          <svg
+export const state = () => ({
+    icons: {
+        lightning: `<svg
             
             viewBox="0 0 24 24"
             fill="none"
@@ -61,12 +16,7 @@ export default {
             />
           </svg>
           `,
-          content: `Our costumers don't like to wait for the content, 
-          world class performance <strong>metrics</strong> are warranted.`,
-        },
-        {
-          title: "Delightful design",
-          icon: `
+        heart: `
           <svg 
               viewBox="0 0 24 24" 
               fill="none" 
@@ -82,11 +32,7 @@ export default {
             />
           </svg>
           `,
-          content: `A clean, easy to use and engaging interface it's a must have for us.`,
-        },
-        {
-          title: "Custom Development",
-          icon: `
+        beaker: `
            <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -101,11 +47,7 @@ export default {
             />
           </svg>
           `,
-          content: `A product made expecially for your needs.`,
-        },
-        {
-          title: "SEO optimized content",
-          icon: `
+        search: `
            <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -118,13 +60,7 @@ export default {
              stroke-linejoin="round"/>
           </svg>
           `,
-          content: `
-          Guidance and tools for you to declare 
-          your services and products  as SEO optimal as posible. `,
-        },
-        {
-          title: "Easy to manage infrastructure",
-          icon: `
+        light_bulb: `
            <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -141,13 +77,7 @@ export default {
              
           </svg>
           `,
-          content: `
-          Leave you with a complicated to manage system it's simply not an option to us.
-           `,
-        },
-        {
-          title: "Support",
-          icon: `
+        support: `
           <svg
             
             viewBox="0 0 24 24"
@@ -164,17 +94,23 @@ export default {
             />
           </svg>
           `,
-          content: `We are happy to help our clients maintain a
-           secure and smooth infrastructure in this ever 
-           changing technical landscape.`,
-        },
-      ],
-    });
+    },
+})
 
-    return { state };
-  },
-};
-</script>
+// export const getters = {
+//     getterValue: state => {
+//         return state.value
+//     }
+// }
 
-<style>
-</style>
+// export const mutations = {
+//     updateValue: (state, payload) => {
+//         state.value = payload
+//     }
+// }
+
+// export const actions = {
+//     updateActionValue({ commit }) {
+//         commit('updateValue', payload)
+//     }
+// }
