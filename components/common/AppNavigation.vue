@@ -8,7 +8,7 @@
       >
         <!-- logo -->
         <div class="">
-          <nuxt-link :to="localePath('/')" class="flex items-baseline">
+          <nuxt-link :to="localePath('/')" class="flex items-baseline focus:outline-none focus:ring-2">
             <p
               class="h-8 w-8 rounded-lg transform translate-y-2 bg-gradient-to-tr from-amber-400 to-fuchsia-700"
             ></p>

@@ -1,8 +1,13 @@
 <template>
   <div class="min-h-screen w-full font-sans">
-    <HomeIntro />
-    <HomeOffers />
-    <HomeWorks />
+    <main>
+      <span class="sr-only absolute top-0 right-0" id="main">
+        Main Content
+      </span>
+      <HomeIntro />
+      <HomeOffers />
+      <HomeWorks />
+    </main>
   </div>
 </template>
 
