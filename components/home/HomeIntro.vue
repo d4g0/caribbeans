@@ -21,7 +21,7 @@
       <div class="mt-16 text-center ">
         <nuxt-link
           :to="localePath('/#')"
-          class="inline-block py-4 px-6 border rounded-kush bg-light-primary text-gray-50 focus-within:ring-2 focus:outline-none focus:ring-2 "
+          class="inline-block py-4 px-6 border rounded-kush bg-light-primary text-gray-50 focus-within:ring-2 focus:outline-none focus:ring-4 "
         >
           {{ $t("home.intro.cta_0") }}
         </nuxt-link>
