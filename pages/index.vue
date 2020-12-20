@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen w-full font-sans">
     <main>
-      <span class="sr-only absolute top-0 right-0" id="main">
+      <span class="sr-only absolute -top-32" id="main">
         Main Content
       </span>
       <HomeIntro />

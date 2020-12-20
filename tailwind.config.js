@@ -6,7 +6,7 @@ module.exports = {
 
     }
   },
-  
+
   darkMode: false, // or 'media' or 'class'
 
   theme: {
@@ -67,6 +67,10 @@ module.exports = {
       borderRadius: {
         kush: '1.2rem',
         og: '8px'
+      },
+
+      zIndex: {
+        70: '70'
       }
     },
   },
