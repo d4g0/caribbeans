@@ -3,7 +3,7 @@ module.exports = {
     common: {
         navigation: {
             home: 'Home',
-            works: 'Works',
+            works: 'Projects',
             contact_us: 'Contact Us'
         }
     },
