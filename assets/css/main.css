@@ -124,6 +124,12 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
     animation: pulse-bg-animation 1.4s infinite;
 }
 
+/* NAV LINKS */
+
+.nuxt-link-exact-active {
+    @apply opacity-100;
+}
+
 /* scroll styles */
 
 /* ::-webkit-scrollbar {
