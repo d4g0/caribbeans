@@ -9,9 +9,11 @@
         <!-- logo -->
         <div class="">
           <nuxt-link :to="localePath('/')" class="flex items-baseline focus:outline-none focus:ring-2">
-            <p
-              class="h-8 w-8 rounded-lg transform translate-y-2 bg-gradient-to-tr from-amber-400 to-fuchsia-700"
-            ></p>
+            <div class="relative border w-8">
+              <span
+              class="absolute -top-6 left-0 h-8 w-full rounded-lg transform  bg-gradient-to-tr from-amber-400 to-fuchsia-700"
+            ></span>
+            </div>
             <h1 class="ml-2 text-2xl text-light-onSurface font-bold">
               Caribbeans
             </h1>
