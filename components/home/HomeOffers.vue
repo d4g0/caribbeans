@@ -8,7 +8,7 @@
         <li
           v-for="item in offers"
           :key="item.title"
-          class="bg-white pl-2 pr-4 py-5 rounded-kush shadow-sm"
+          class="bg-white px-4 py-5 rounded-kush shadow-sm"
         >
           <HomeOfferItem :item="item" />
         </li>
