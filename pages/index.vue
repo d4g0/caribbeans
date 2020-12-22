@@ -1,9 +1,9 @@
 <template>
   <div class="min-h-screen w-full font-sans">
     <main>
-      <span class="sr-only absolute -top-32" id="main">
+      <p tabindex="-1" class="absolute z-50 top-0 right-0" id="main">
         Main Content
-      </span>
+      </p>
       <HomeIntro />
       <HomeOffers />
       <HomeWorks />
