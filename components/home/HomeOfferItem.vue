@@ -1,18 +1,20 @@
 <template>
-  <div class="">
-    <article class="text-left flex">
-      <div>
-        <div class="w-12 h-12 rounded-kush bg-gray-200 p-1.5">
-          <div v-html="item.icon"></div>
-        </div>
+  <section
+    :aria-labelledby="toId(item.title)"
+    class="text-left flex"
+  >
+    <div>
+      <div class="w-12 h-12 rounded-kush bg-gray-200 p-1.5">
+        <div v-html="item.icon"></div>
       </div>
-      <div class="ml-4">
-        <h1 class="font-medium text-xl leading-tight">{{ item.title }}</h1>
-        <p v-html="item.body" class="mt-2 text-sm">
-        </p>
-      </div>
-    </article>
-  </div>
+    </div>
+    <div class="ml-4">
+      <h3 :id="toId(item.title)" class="font-medium text-xl leading-tight">
+        {{ item.title }}
+      </h3>
+      <p v-html="item.body" class="mt-2 text-sm"></p>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -44,6 +46,11 @@ export default {
         };
       },
     },
+  },
+  setup() {
+    return {
+      toId: (str = "") => str.toLowerCase().split(" ").join("-"),
+    };
   },
 };
 </script>

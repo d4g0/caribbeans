@@ -1,10 +1,11 @@
 <template>
   <div class="">
-    <div class="relative ">
-        <!-- @click="toogleOpen" -->
+    <div class="relative">
+      <!-- @click="toogleOpen" -->
       <button
+        
         @click="toogleSwitch()"
-        class="relative z-20 p-2 rounded-lg border bg-white hover:bg-gray-100 focus:outline-none focus-within:outline-white focus-within:ring-2"
+        class="relative z-20 p-2 rounded-lg border bg-white hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-amber-500"
       >
         <svg
           width="24"
@@ -30,7 +31,7 @@
           class="absolute z-20 bottom-12 left-0 bg-white border rounded-md py-2 px-4 shadow-md"
         >
           <nuxt-link
-            class="hover:bg-gray-100 block py-1 px-2 rounded-lg text-sm"
+            class="hover:bg-gray-100 block py-1 px-2 rounded-lg text-sm focus:outline-none focus:ring-4 focus:ring-amber-500"
             v-for="locale in availableLocales"
             :key="locale.code"
             :to="switchLocalePath(locale.code)"
@@ -66,7 +67,7 @@ export default {
   },
 
   // setup() {
-   
+
   // },
 };
 </script>

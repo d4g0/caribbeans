@@ -1,8 +1,8 @@
 
 export const state = () => ({
-    icons: {
-        lightning: `<svg
-            
+  icons: {
+    lightning: `<svg
+            title="Lighting Volt"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -16,8 +16,9 @@ export const state = () => ({
             />
           </svg>
           `,
-        heart: `
+    heart: `
           <svg 
+              title="A Heart"
               viewBox="0 0 24 24" 
               fill="none" 
               xmlns="http://www.w3.org/2000/svg"
@@ -32,8 +33,9 @@ export const state = () => ({
             />
           </svg>
           `,
-        beaker: `
+    beaker: `
            <svg
+            title="A beaker bubbling"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -47,8 +49,9 @@ export const state = () => ({
             />
           </svg>
           `,
-        search: `
+    search: `
            <svg
+            title="A magnifier"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -60,8 +63,9 @@ export const state = () => ({
              stroke-linejoin="round"/>
           </svg>
           `,
-        light_bulb: `
+    light_bulb: `
            <svg
+            title="A light bulb on"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -77,9 +81,9 @@ export const state = () => ({
              
           </svg>
           `,
-        support: `
+    support: `
           <svg
-            
+            title="A life saver donut"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +98,7 @@ export const state = () => ({
             />
           </svg>
           `,
-    },
+  },
 })
 
 // export const getters = {
