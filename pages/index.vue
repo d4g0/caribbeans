@@ -1,23 +1,7 @@
 <template>
   <div class="min-h-screen w-full font-sans">
     <!-- tabindex="-1" id="main" -->
-    <main>
-        <!-- <p
-          
-          aria-label="Main Content Area"
-          tabindex="-1"
-          class="inline-block ring-2 ring-amber-500 p-4 rounded-kush"
-        >
-          Main content Area
-        </p> -->
-          <!-- <a
-            href="#nav"
-            
-            aria-labelledby="main-content-widget"
-            class="pt-20 md:pt-44 text-amber-800 underline"
-          >
-            Go back to navigation
-          </a> -->
+    <main role="main">
       <HomeIntro />
       <HomeOffers />
       <HomeWorks />

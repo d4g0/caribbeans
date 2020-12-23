@@ -1,7 +1,10 @@
 <template>
-  <div class="mt-32 max-w-screen-lg mx-auto px-6 xl:px-0">
-    <section class="text-center">
-      <h1 class="font-bold text-3xl">{{$t('home.offers.title')}}</h1>
+  <div class="mt-32 max-w-screen-lg mx-auto px-6 xl:px-0" >
+    <section 
+    class="text-center focus:outline-none focus:ring-4  focus:ring-amber-500 rounded-kush" 
+    tabindex="0" 
+    aria-labelledby="home-offers-title">
+      <h2 id="home-offers-title" class="font-bold text-3xl">{{$t('home.offers.title')}}</h2>
       <ul
         class="mt-10 md:mt-16 space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-4 lg:grid-cols-3"
       >
