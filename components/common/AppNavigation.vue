@@ -9,7 +9,7 @@
       >
         <!-- logo -->
         <div class="">
-          <nuxt-link :to="localePath('/')" class="flex items-baseline focus:outline-none focus:ring-2">
+          <nuxt-link :to="localePath('/')" class="flex items-baseline text-sm focus:outline-none focus:ring-4 focus:ring-amber-500 rounded-kush">
             <div class="relative border w-8">
               <span
               class="absolute -top-6 left-0 h-8 w-full rounded-lg transform  bg-gradient-to-tr from-amber-400 to-fuchsia-700"
@@ -26,7 +26,7 @@
           <li>
             <nuxt-link
               :to="localePath('/')"
-              class="py-1 px-2 rounded-md opacity-50 hover:opacity-100 hover:bg-gray-100 transition-all duration-100"
+              class="py-1 px-2 rounded-md opacity-50 hover:opacity-100 hover:bg-gray-100 transition-all duration-100 text-sm focus:outline-none focus:ring-4 focus:ring-amber-500"
               >Home</nuxt-link
             >
           </li>
@@ -34,14 +34,14 @@
             <nuxt-link
               :to="localePath('works')"
               href=""
-              class="py-1 px-2 rounded-md opacity-50 hover:opacity-100 hover:bg-gray-100 transition-all duration-100"
+              class="py-1 px-2 rounded-md opacity-50 hover:opacity-100 hover:bg-gray-100 transition-all duration-100 text-sm focus:outline-none focus:ring-4 focus:ring-amber-500"
               >{{ $t("common.navigation.works") }}</nuxt-link
             >
           </li>
           <li>
             <nuxt-link
               :to="localePath('contact')"
-              class="py-1 px-2 rounded-md opacity-50 hover:opacity-100 hover:bg-gray-100 transition-all duration-100"
+              class="py-1 px-2 rounded-md opacity-50 hover:opacity-100 hover:bg-gray-100 transition-all duration-100 text-sm focus:outline-none focus:ring-4 focus:ring-amber-500"
               >{{$t('common.navigation.contact_us')}}</nuxt-link
             >
           </li>
