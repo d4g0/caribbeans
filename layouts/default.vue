@@ -18,6 +18,9 @@ export default {
     AppFooter,
     TheSkipToMainLink,
   },
+  head () {
+    return this.$nuxtI18nSeo()
+  }
 };
 </script>
 
