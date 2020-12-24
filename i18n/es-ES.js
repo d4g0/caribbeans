@@ -18,8 +18,7 @@ module.exports = {
                 support: 'Soporte'
             },
             heading: 'Hacemos sitios web para negocios locales',
-            description: `Creemos que la pantalla de nuestros clientes es uno de los lugares más importante del
-                          planeta. Planificamos, diseñamos y construimos para entregar una experiencia encantadora.`,
+            description: `Planificamos, diseñamos y construimos para entregar una experiencia encantadora.`,
             cta_0: `Construyamos algo`,
         },
         // 
@@ -43,7 +42,7 @@ module.exports = {
                 {
                     icon: 'beaker',
                     title: 'Desarrollo a medida',
-                    body: `Un producto hecho exclusivamente suplir para sus nesecidades.`
+                    body: `Un producto hecho exclusivamente para suplir  sus nesecidades.`
                 },
                 {
                     icon: 'search',
@@ -55,7 +54,7 @@ module.exports = {
                 {
                     icon: 'light_bulb',
                     title: 'Infrastructura fácil de manejar',
-                    body: `Dejarle con un sitema complicado de manejar simplemente no es una opción para nosotros.`
+                    body: `Dejarle con un sistema complicado  simplemente no es una opción para nosotros.`
                 },
                 {
                     icon: 'support',

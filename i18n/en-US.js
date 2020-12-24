@@ -14,13 +14,13 @@ module.exports = {
         // 
         intro: {
             bulleted: {
-                design: 'Desing',
+                design: 'Design',
                 development: 'Development',
                 support: 'Support'
             },
             heading: 'We make websites for local businesses',
-            description: `We believe that the screen of our costumers it's one of the more important places on the planet. We plan, design and build a to deliver a delightful experience.`,
-            cta_0: `Let's Build Something`,
+            description: `We plan, design and build  to deliver a delightful experience.`,
+            cta_0: `See what we do`,
         },
         // 
         offers:{

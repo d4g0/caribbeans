@@ -1,11 +1,11 @@
 <template>
-  <div class="mt-32 max-w-screen-lg mx-auto px-6 xl:px-0">
+  <div class=" max-w-screen-lg mx-auto px-6 xl:px-0">
     <section
       class="text-center focus:outline-none focus:ring-4 focus:ring-amber-500 rounded-kush"
       tabindex="0"
       aria-labelledby="home-offers-title"
     >
-      <h2 id="home-offers-title" class="font-bold text-3xl">
+      <h2 id="home-offers-title" class="font-bold text-3xl pt-32">
         {{ $t("home.offers.title") }}
       </h2>
       <ul
@@ -21,6 +21,7 @@
           <HomeOfferItem :item="item" />
         </li>
       </ul>
+      <p class="mt-16 font-bold text-xl">And much more</p>
     </section>
   </div>
 </template>

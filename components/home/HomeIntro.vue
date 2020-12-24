@@ -18,19 +18,19 @@
       <!-- heading -->
       <h1
         id="main-heading"
-        class="mt-4 font-bold text-3xl lg:text-7xl text-center focus:outline-none focus:ring-4 focus:ring-amber-500 rounded-kush"
+        class="mt-4 font-bold text-3xl md:text-5xl lg:text-7xl  text-center focus:outline-none focus:ring-4 focus:ring-amber-500 rounded-kush"
         tabindex="0"
       >
         {{ $t("home.intro.heading") }}
       </h1>
 
-      <p class="mt-6 md:mt-20 text-sm text-center max-w-md mx-auto opacity-80">
+      <p class="mt-6 md:mt-10 text-sm text-center max-w-md mx-auto opacity-80">
         {{ $t("home.intro.description") }}
       </p>
 
       <div class="mt-16 text-center">
         <nuxt-link
-          :to="localePath('/#')"
+          to="#home-offers-title"
           class="inline-block py-4 px-6 border rounded-kush bg-light-primary text-gray-50 focus:outline-none focus:ring-4 focus:ring-amber-500"
         >
           {{ $t("home.intro.cta_0") }}
