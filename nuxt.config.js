@@ -31,14 +31,16 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    script: [
+      { src: '/caribbeans/scripts/focus-visible.min.js', async: true, defer: true }
+    ],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     '~/assets/css/main.css',
   ],
-
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     '~/plugins/composition-api.js',
@@ -95,7 +97,14 @@ export default {
   router: {
     base: '/caribbeans/'
   },
-  target: 'static'
+  target: 'static',
+  postcss: {
+    // Add plugin names as key and arguments as value
+    // Install them before as dependencies with npm or yarn
+    plugins: {
+      'postcss-focus-visible': {}
+    }
+  }
   // server: {
   //   host: '0.0.0.0',
   //   port: process.env.PORT || 5500

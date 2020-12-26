@@ -1,7 +1,7 @@
 <template>
   <div class=" max-w-screen-lg mx-auto px-6 xl:px-0">
     <section
-      class="text-center focus:outline-none focus:ring-4 focus:ring-amber-500 rounded-kush"
+      class="text-center focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-500 rounded-kush"
       tabindex="0"
       aria-labelledby="home-offers-title"
     >
@@ -15,7 +15,7 @@
         <li
           v-for="item in offers"
           :key="item.title"
-          class="bg-white px-4 py-5 shadow-sm focus:outline-none focus:ring-4 focus:ring-amber-500 rounded-kush "
+          class="bg-white px-4 py-5 shadow-sm focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-500 rounded-kush "
           tabindex="0"
         >
           <HomeOfferItem :item="item" />

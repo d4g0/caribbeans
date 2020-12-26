@@ -3,9 +3,9 @@
     <div class="relative">
       <!-- @click="toogleOpen" -->
       <button
-        
+        aria-label="Language Switcher"
         @click="toogleSwitch()"
-        class="relative z-20 p-2 rounded-lg border bg-white hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-amber-500"
+        class="relative z-20 p-2 rounded-lg border bg-white hover:bg-gray-100 focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-500"
       >
         <svg
           width="24"
@@ -29,9 +29,10 @@
         <div
           v-if="isSwitchOpen"
           class="absolute z-20 bottom-12 left-0 bg-white border rounded-md py-2 px-4 shadow-md"
+          aria-label="Language Options"
         >
           <nuxt-link
-            class="hover:bg-gray-100 block py-1 px-2 rounded-lg text-sm focus:outline-none focus:ring-4 focus:ring-amber-500"
+            class="hover:bg-gray-100 block py-1 px-2 rounded-lg text-sm focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-500"
             v-for="locale in availableLocales"
             :key="locale.code"
             :to="switchLocalePath(locale.code)"

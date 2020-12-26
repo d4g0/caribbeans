@@ -75,8 +75,8 @@ module.exports = {
     },
   },
   variants: {
-    ringColor: ['responsive', 'dark', 'focus-within', 'focus', 'hover'],
-    ringWidth: ['responsive', 'focus-within', 'focus', 'hover'],
+    ringColor: ['responsive', 'dark', 'focus-within', 'focus', 'hover','focus-visible'],
+    ringWidth: ['responsive', 'focus-within', 'focus', 'hover','focus-visible'],
     borderWidth: ['responsive', 'hover'],
     backgroundImage: ['responsive', 'hover'],
 

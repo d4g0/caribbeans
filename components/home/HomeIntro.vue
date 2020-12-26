@@ -3,7 +3,7 @@
     <!--  -->
     <section
       aria-labelledby="main-heading"
-      class="px-6 md:px-0 max-w-screen-md mx-auto rounded-kush pt-20 md:pt-32 focus:outline-none focus:ring-4 focus:ring-amber-500"
+      class="px-6 md:px-0 max-w-screen-md mx-auto rounded-kush pt-20 md:pt-32 focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-500"
       id="main-content"
       tabindex="0"
     >
@@ -18,7 +18,7 @@
       <!-- heading -->
       <h1
         id="main-heading"
-        class="mt-4 font-bold text-3xl md:text-5xl lg:text-7xl  text-center focus:outline-none focus:ring-4 focus:ring-amber-500 rounded-kush"
+        class="mt-4 font-bold text-3xl md:text-5xl lg:text-7xl  text-center focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-500 rounded-kush"
         tabindex="0"
       >
         {{ $t("home.intro.heading") }}
@@ -31,7 +31,7 @@
       <div class="mt-16 text-center">
         <nuxt-link
           to="#home-offers-title"
-          class="inline-block py-4 px-6 border rounded-kush bg-light-primary text-gray-50 focus:outline-none focus:ring-4 focus:ring-amber-500"
+          class="inline-block py-4 px-6 border rounded-kush bg-light-primary text-gray-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-500"
         >
           {{ $t("home.intro.cta_0") }}
         </nuxt-link>
