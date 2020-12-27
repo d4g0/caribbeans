@@ -1,10 +1,11 @@
 <template>
-  <div class="">
+  <div>
     <div class="relative">
-      <!-- @click="toogleOpen" -->
       <button
-        aria-label="Language Switcher"
-        @click="toogleSwitch()"
+        ref="controlBtn"
+        :aria-label="$t('common.langSwitcher.label')"
+        aria-haspopup="true"
+        aria-controls="lang_menu"
         class="relative z-20 p-2 rounded-lg border bg-white hover:bg-gray-100 focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-500"
       >
         <svg
@@ -27,17 +28,22 @@
       <!-- language options -->
       <transition name="fade-from-bottom">
         <div
-          v-if="isSwitchOpen"
+          id="lang_menu"
+          ref="controlMenu"
+          v-show="switchIsOpen"
           class="absolute z-20 bottom-12 left-0 bg-white border rounded-md py-2 px-4 shadow-md"
           aria-label="Language Options"
         >
-          <nuxt-link
-            class="hover:bg-gray-100 block py-1 px-2 rounded-lg text-sm focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-500"
-            v-for="locale in availableLocales"
-            :key="locale.code"
-            :to="switchLocalePath(locale.code)"
-            >{{ locale.name }}</nuxt-link
-          >
+          <ul :aria-label="$t('common.langSwitcher.optionsLabel')">
+            <li v-for="locale in availableLocales" :key="locale.code">
+              <nuxt-link
+                class="hover:bg-gray-100 block py-1 px-2 rounded-lg text-sm focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-500"
+                :to="switchLocalePath(locale.code)"
+                @click.native="toogleSwitch('close')"
+                >{{ locale.name }}</nuxt-link
+              >
+            </li>
+          </ul>
         </div>
       </transition>
     </div>
@@ -45,31 +51,98 @@
     <!-- overlay -->
     <transition name="fade">
       <div
-        v-if="isSwitchOpen"
-        @click.stop="toogleSwitch('close')"
+        v-if="switchIsOpen"
+        @click="toogleSwitch('close')"
         class="bg-teal-2000 fixed z-10 inset-0"
       ></div>
     </transition>
+
+    <!-- TEST -->
+    <!-- <button @click="test">focus</button> -->
+    <!-- <a href="#" id="a2" class="focus:ring-4 focus:ring-amber-500">a2</a> -->
   </div>
 </template>
 
 <script>
-import { mapGetters, mapMutations } from "vuex";
-import { computed, ref } from "@vue/composition-api";
+import { useEventListener, useTimeoutFn } from "@vueuse/core";
+import {
+  computed,
+  onMounted,
+  reactive,
+  ref,
+  toRefs,
+} from "@vue/composition-api";
 export default {
   computed: {
     availableLocales() {
       return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale);
     },
-    ...mapGetters("lang/", ["isSwitchOpen"]),
-  },
-  methods: {
-    ...mapMutations("lang/", ["toogleSwitch"]),
   },
 
-  // setup() {
+  setup() {
+    const controlBtn = ref(null);
+    const controlMenu = ref(null);
+    const state = reactive({
+      switchIsOpen: false,
+    });
 
-  // },
+    function toogleSwitch(switcState) {
+      // switcState: 'open' || 'close' || null -> toggle
+      if (!switcState) {
+        state.switchIsOpen = !state.switchIsOpen;
+        return;
+      }
+      switcState === "open"
+        ? (state.switchIsOpen = true)
+        : (state.switchIsOpen = false);
+    }
+
+    function handleKey(evt) {
+      if (evt?.target == "Escape" || evt.code == 27) {
+        toogleSwitch("close");
+      }
+    }
+
+    function handleClick(evt) {
+      if (process.client) {
+        // console.log(evt.target);
+
+        // if was in btn
+        if (controlBtn.value.contains(evt?.target)) {
+          toogleSwitch();
+
+          if (state.switchIsOpen) {
+            const { isActive, start, stop } = useTimeoutFn(() => {
+              controlMenu.value.querySelector("a").focus();
+            }, 1);
+            start();
+          }
+        }
+      }
+    }
+
+    // -------
+    // EVENTS
+    // -------
+    useEventListener("keyup", handleKey);
+    useEventListener("click", handleClick);
+
+    // test
+
+    function test(params) {
+      if (process.client) {
+        document.querySelector("#a2").focus();
+      }
+    }
+
+    return {
+      toogleSwitch,
+      controlBtn,
+      controlMenu,
+      ...toRefs(state),
+      test,
+    };
+  },
 };
 </script>
 

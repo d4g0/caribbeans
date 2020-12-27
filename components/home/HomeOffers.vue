@@ -42,6 +42,7 @@ export default {
       offers = offers.map((offer) => ({
         ...offer,
         icon: this.icons[offer.icon],
+        iconTitle:offer.iconTitle
       }));
       return offers;
     },

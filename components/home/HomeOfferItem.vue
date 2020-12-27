@@ -1,23 +1,21 @@
 <template>
-  <section
-    :aria-labelledby="toId(item.title)"
-    class="text-left flex"
-  >
+  <section :aria-labelledby="toId(item.title)" class="text-left flex">
     <div>
       <div class="w-12 h-12 rounded-kush bg-gray-200 p-1.5">
-        <div v-html="item.icon"></div>
+        <div v-html="item.icon" ref="svgContainer" ></div>
       </div>
     </div>
-    <div class="ml-4">
+    <header class="ml-4">
       <h3 :id="toId(item.title)" class="font-medium text-xl leading-tight">
         {{ item.title }}
       </h3>
       <p v-html="item.body" class="mt-2 text-sm"></p>
-    </div>
+    </header>
   </section>
 </template>
 
 <script>
+import { onMounted, ref } from "@vue/composition-api";
 export default {
   props: {
     item: {
@@ -43,13 +41,21 @@ export default {
           `,
           body: `We don't like our costumers wait for us. 
           So we provide world class performance <strong>metrics</strong>.`,
+          iconTitle: "",
         };
       },
     },
   },
-  setup() {
+  setup({ item }) {
+    const svgContainer = ref(null)
+    onMounted(() => {
+      if (process.client) {
+        svgContainer.value.querySelector('svg').setAttribute('title',item.iconTitle)
+      }
+    });
     return {
       toId: (str = "") => str.toLowerCase().split(" ").join("-"),
+      svgContainer
     };
   },
 };

@@ -1,6 +1,5 @@
 <template>
   <div class="min-h-screen w-full font-sans">
-    <!-- tabindex="-1" id="main" -->
     <main role="main">
       <HomeIntro />
       <HomeOffers />
@@ -10,6 +9,7 @@
 </template>
 
 <script>
+// import { onMounted } from '@vue/composition-api';
 import TheSkipToMainLink from "~/components/common/TheSkipToMainLink.vue";
 import HomeIntro from "~/components/home/HomeIntro.vue";
 import HomeOffers from "~/components/home/HomeOffers.vue";
@@ -23,14 +23,11 @@ export default {
     HomeWorks,
     TheSkipToMainLink,
   },
+  setup(){
+    
+  }
 };
 </script>
 
 <style >
-.font-pacifico {
-  font-family: Pacifico;
-}
-.font-dm-mono {
-  font-family: "DM Mono";
-}
 </style>

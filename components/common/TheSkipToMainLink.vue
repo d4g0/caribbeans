@@ -1,6 +1,7 @@
 <template>
   <div class="">
     <nuxt-link
+      id="skip-to-main-link"
       exact
       to="#main-content"
       @click.native="scrollFix('#main-content')"
