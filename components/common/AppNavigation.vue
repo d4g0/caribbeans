@@ -63,9 +63,6 @@
 </template>
 
 <script>
-// TODO
-// :class="{'router-link-active': isOnPath('/parent')}"
-// fix active-class losse on tab navigation
 
 export default {
   computed: {
