@@ -20,12 +20,6 @@ import { ref } from "@vue/composition-api";
 import scrollFix from '~/composables/scrollFix'
 export default {
   setup() {
-    const skipLink = ref("");
-
-    // function scrollFix(hashbang) {
-    //   const nextPoint = document.querySelector(hashbang);
-    //   nextPoint.focus();
-    // }
 
     return {
       scrollFix,
