@@ -79,6 +79,7 @@ module.exports = {
     ringWidth: ['responsive', 'focus-within', 'focus', 'hover','focus-visible'],
     borderWidth: ['responsive', 'hover'],
     backgroundImage: ['responsive', 'hover'],
+    opacity: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus','focus-visible'],
 
   },
   plugins: [],

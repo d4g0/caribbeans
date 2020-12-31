@@ -1,29 +1,26 @@
 <template>
   <div class="min-h-screen w-full font-sans">
     <main role="main">
+      <SkipToMainLink />
       <SkipToNavLink />
-      <HomeIntro />
-      <HomeOffers />
-      <HomeWorks />
+
+      
     </main>
   </div>
 </template>
 
 <script>
+import SkipToMainLink from "~/components/common/SkipToMainLink.vue";
 import SkipToNavLink from "~/components/common/SkipToNavLink.vue";
-// import { onMounted } from '@vue/composition-api';
-import HomeIntro from "~/components/home/HomeIntro.vue";
-import HomeOffers from "~/components/home/HomeOffers.vue";
-import HomeWorks from "~/components/home/HomeWorks.vue";
 
 export default {
   name: "App",
+  layout: "mesh",
   components: {
-    HomeIntro,
-    HomeOffers,
-    HomeWorks,
     SkipToNavLink,
+    SkipToMainLink,
   },
+
   // beforeRouteEnter(to, from, next) {
   //   console.log({
   //     to,

@@ -1,12 +1,20 @@
 <template>
-  <div class="text-light-onSurface">
+  <div class="antialiased text-light-onSurface pt-16 bg-gray-50">
     <Nuxt />
   </div>
 </template>
 
 <script>
-export default {};
+
+export default {
+  components: {
+    
+  },
+  head() {
+    return this.$nuxtI18nSeo();
+  },
+  
+};
 </script>
 
-<style>
-</style>
+    
