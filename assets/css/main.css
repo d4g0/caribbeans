@@ -130,6 +130,9 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
     @apply opacity-100;
 }
 
+.nuxt-link-active {
+    @apply opacity-100;
+}
 /* scroll styles */
 
 /* ::-webkit-scrollbar {

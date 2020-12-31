@@ -9,11 +9,14 @@
       >
         <!-- logo -->
         <div class="">
-          <nuxt-link :to="localePath('/')" class="flex items-baseline text-sm focus:outline-none focus:ring-4 focus:ring-amber-500 rounded-kush">
+          <nuxt-link
+            :to="localePath('/')"
+            class="flex items-baseline text-sm focus:outline-none focus:ring-4 focus:ring-amber-500 rounded-kush"
+          >
             <div class="relative border w-8">
               <span
-              class="absolute -top-6 left-0 h-8 w-full rounded-lg transform  bg-gradient-to-tr from-amber-400 to-fuchsia-700"
-            ></span>
+                class="absolute -top-6 left-0 h-8 w-full rounded-lg transform bg-gradient-to-tr from-amber-400 to-fuchsia-700"
+              ></span>
             </div>
             <h1 class="ml-2 text-2xl text-light-onSurface font-bold">
               Caribbeans
@@ -23,26 +26,34 @@
 
         <!-- links -->
         <ul class="text-sm font-medium hidden lg:flex space-x-4">
+          <!-- home -->
           <li>
             <nuxt-link
               :to="localePath('/')"
+              exact=""
+              :class="{ 'nuxt-link-exact-active': isOnPath('index') }"
               class="py-1 px-2 rounded-md opacity-50 hover:opacity-100 hover:bg-gray-100 transition-all duration-100 text-sm focus:outline-none focus:ring-4 focus:ring-amber-500"
               >Home</nuxt-link
             >
           </li>
+          <!-- works -->
           <li>
             <nuxt-link
               :to="localePath('works')"
-              href=""
+              exact=""
+              :class="{ 'nuxt-link-exact-active': isOnPath('works') }"
               class="py-1 px-2 rounded-md opacity-50 hover:opacity-100 hover:bg-gray-100 transition-all duration-100 text-sm focus:outline-none focus:ring-4 focus:ring-amber-500"
               >{{ $t("common.navigation.works") }}</nuxt-link
             >
           </li>
+          <!-- contact -->
           <li>
             <nuxt-link
               :to="localePath('contact')"
+              exact=""
+              :class="{ 'nuxt-link-exact-active': isOnPath('contact') }"
               class="py-1 px-2 rounded-md opacity-50 hover:opacity-100 hover:bg-gray-100 transition-all duration-100 text-sm focus:outline-none focus:ring-4 focus:ring-amber-500"
-              >{{$t('common.navigation.contact_us')}}</nuxt-link
+              >{{ $t("common.navigation.contact_us") }}</nuxt-link
             >
           </li>
         </ul>
@@ -52,13 +63,26 @@
 </template>
 
 <script>
+// TODO
+// :class="{'router-link-active': isOnPath('/parent')}"
+// fix active-class losse on tab navigation
+
 export default {
   computed: {
     logs() {
       return {
-        localePath : this.localePath('/works')
-      } 
-    }
+        localePath: this.localePath("/works"),
+      };
+    },
+  },
+  methods: {
+    isOnPath(path /* string */) {
+      return this.$route.name.startsWith(path);
+    },
+  },
+
+  mounted() {
+    console.log(this.$route)
   },
 };
 </script>
