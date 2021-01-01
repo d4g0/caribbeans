@@ -33,6 +33,7 @@
               exact=""
               :class="{ 'nuxt-link-exact-active': isOnPath('index') }"
               class="py-1 px-2 rounded-md opacity-50 hover:opacity-100 hover:bg-gray-100 transition-all duration-100 text-sm focus:outline-none focus:ring-4 focus:ring-amber-500"
+              @click.native="focusElAsync('skip-to-nav-link')"
               >Home</nuxt-link
             >
           </li>
@@ -63,21 +64,21 @@
 </template>
 
 <script>
+import { focusElAsync } from "~/composables/utils";
 
 export default {
-  computed: {
-    logs() {
-      return {
-        localePath: this.localePath("/works"),
-      };
-    },
-  },
+  // focusElAsync("skip-to-nav-link");
   methods: {
     isOnPath(path /* string */) {
       return this.$route.name.startsWith(path);
     },
   },
 
+  setup() {
+    return {
+      focusElAsync,
+    };
+  },
 };
 </script>
 

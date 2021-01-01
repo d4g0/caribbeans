@@ -15,7 +15,7 @@ import SkipToNavLink from "~/components/common/SkipToNavLink.vue";
 import HomeIntro from "~/components/home/HomeIntro.vue";
 import HomeOffers from "~/components/home/HomeOffers.vue";
 import HomeWorks from "~/components/home/HomeWorks.vue";
-
+import { focusEl } from "~/composables/utils";
 export default {
   name: "App",
   components: {
@@ -30,7 +30,10 @@ export default {
   //     from,
   //     next,
   //   });
-  //   next()
+  //   if (from.name) {
+  //     focusEl("skip-to-nav-link");
+  //   }
+  //   next();
   // },
   setup() {},
 };
