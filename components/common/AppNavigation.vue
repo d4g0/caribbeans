@@ -1,7 +1,7 @@
 <template>
-  <div class="text-light-onSurface dark:text-dark-onSurface bg-light-surface dark:bg-dark-surface transition-all duration-150 ease-in-out">
+  <div class="text-light-onSurface dark:text-dark-onSurface ">
     <header
-      class=" border-b dark:border-gray-500 bg-light-surface dark:bg-dark-surface h-16 fixed z-30 top-0 right-0 w-full flex items-center"
+      class=" border-b dark:border-gray-500 bg-light-surface dark:bg-dark-surface transition-all ease-in-out duration-200 h-16 fixed z-30 top-0 right-0 w-full flex items-center"
     >
     <!-- border border-gray-300 -->
       <nav

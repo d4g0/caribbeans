@@ -1,5 +1,5 @@
 <template>
-  <div class="antialiased text-light-onSurface dark:text-dark-onSurface bg-light-surface dark:bg-dark-surface transition-all duration-150 ease-in-out">
+  <div class="antialiased text-light-onSurface dark:text-dark-onSurface bg-light-surface dark:bg-dark-surface transition-all duration-200 ease-in-out">
     <SkipToMainLink />
     <AppNavigation />
     <Nuxt />
