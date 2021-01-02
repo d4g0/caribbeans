@@ -14,7 +14,7 @@
             :to="localePath('/')"
             class="flex items-baseline text-sm focus:outline-none focus:ring-4 focus:ring-amber-500 rounded-kush"
           >
-            <div class="relative border w-8">
+            <div class="relative  w-8">
               <span
                 class="absolute -top-6 left-0 h-8 w-full rounded-lg transform bg-gradient-to-tr from-amber-400 to-fuchsia-700"
               ></span>

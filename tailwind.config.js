@@ -55,16 +55,19 @@ module.exports = {
       colors: {
         light: {
           // awwwards light
+          primary: '#0B2A4A',
           surface: '#f4f7f6 ',
           onSurface: '#304a5f', 
-          primary: '#0B2A4A'
+          btns:'#fff',
+          surfaceElevated: '#fff',
         },
         dark: {
           // github dark
+          primary: '#0B2A4A',
           surface: '#0d1117 ',
           onSurface: '#c9d1d9', 
+          btns:'#21262d',
           surfaceElevated: '#161b22',
-          primary: '#0B2A4A'
         },
         gray: colors.blueGray,
         ...colors

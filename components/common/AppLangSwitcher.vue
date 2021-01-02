@@ -6,15 +6,16 @@
         :aria-label="$t('common.langSwitcher.label')"
         aria-haspopup="true"
         aria-controls="lang_menu"
-        class="relative z-20 p-2 rounded-lg border bg-white hover:bg-gray-100 focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-500"
+        class="p-2  w-full h-full focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-500"
+        :class="clasess"
       >
         <svg
-          width="24"
-          height="24"
+          
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          class="stroke-current"
+          class="stroke-current w-full h-full"
+          :class="svgClasess"
         >
           <path
             d="M3 5H15M9 3V5M10.0482 14.5C8.52083 12.9178 7.28073 11.0565 6.41187 9M12.5 18H19.5M11 21L16 11L21 21M12.7511 5C11.7831 10.7702 8.06969 15.6095 3 18.129"
@@ -73,6 +74,17 @@ import {
   toRefs,
 } from "@vue/composition-api";
 export default {
+  props: {
+    clasess: {
+      type: String,
+      default:
+        "rounded-og border dark:border-gray-500 hover:bg-gray-300  dark:hover:bg-dark-surfaceElevated",
+    },
+    svgClasess: {
+      type: String,
+      default: "opacity-75 hover:opacity-100",
+    },
+  },
   computed: {
     availableLocales() {
       return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale);

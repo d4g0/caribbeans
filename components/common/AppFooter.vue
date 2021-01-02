@@ -4,13 +4,16 @@
   >
     <div class="max-w-screen-lg mx-auto px-6 xl:px-0 pt-10">
       <ul class="flex space-x-4">
-        <li>
-          <AppLangSwitcher />
+        <li class="w-10 h-10">
+          <AppLangSwitcher
+            svgClasess=""
+            clasess="rounded-og border bg-white dark:border-gray-500 hover:bg-gray-300  dark:bg-dark-surfaceElevated dark:hover:bg-gray-600"
+          />
         </li>
         <li class="w-10 h-10">
           <ColorModeCtrl
             svgClasess=""
-            clasess="rounded-og border bg-white dark:border-gray-500 hover:bg-gray-300  dark:hover:bg-dark-surfaceElevated"
+            clasess="rounded-og border bg-white dark:border-gray-500 hover:bg-gray-300  dark:bg-dark-surfaceElevated dark:hover:bg-gray-600"
           />
         </li>
       </ul>
