@@ -15,7 +15,7 @@
         <li
           v-for="item in offers"
           :key="item.title"
-          class="bg-white px-4 py-5 shadow-sm focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-500 rounded-kush "
+          class="bg-white dark:bg-dark-surfaceElevated px-4 py-5 shadow-sm focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-500 rounded-kush "
           tabindex="0"
         >
           <HomeOfferItem :item="item" />

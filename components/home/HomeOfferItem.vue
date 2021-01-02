@@ -1,7 +1,7 @@
 <template>
-  <section :aria-labelledby="toId(item.title)" class="text-left flex">
+  <section :aria-labelledby="toId(item.title)" class="text-left flex ">
     <div>
-      <div class="w-12 h-12 rounded-kush bg-gray-200 p-1.5">
+      <div class="w-12 h-12 rounded-kush bg-gray-200 dark:bg-gray-600  p-1.5">
         <div v-html="item.icon" ref="svgContainer" ></div>
       </div>
     </div>

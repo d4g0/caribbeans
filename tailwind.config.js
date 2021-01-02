@@ -7,7 +7,7 @@ module.exports = {
     }
   },
 
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
 
   theme: {
 
@@ -54,7 +54,16 @@ module.exports = {
       // -------
       colors: {
         light: {
-          onSurface: '#304a5f',
+          // awwwards light
+          surface: '#f4f7f6 ',
+          onSurface: '#304a5f', 
+          primary: '#0B2A4A'
+        },
+        dark: {
+          // github dark
+          surface: '#0d1117 ',
+          onSurface: '#c9d1d9', 
+          surfaceElevated: '#161b22',
           primary: '#0B2A4A'
         },
         gray: colors.blueGray,
@@ -75,11 +84,14 @@ module.exports = {
     },
   },
   variants: {
-    ringColor: ['responsive', 'dark', 'focus-within', 'focus', 'hover','focus-visible'],
-    ringWidth: ['responsive', 'focus-within', 'focus', 'hover','focus-visible'],
+    ringColor: ['responsive', 'dark', 'focus-within', 'focus', 'hover', 'focus-visible'],
+    ringWidth: ['responsive', 'focus-within', 'focus', 'hover', 'focus-visible'],
     borderWidth: ['responsive', 'hover'],
     backgroundImage: ['responsive', 'hover'],
-    opacity: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus','focus-visible'],
+    opacity: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus', 'focus-visible'],
+    // backgroundColor: ["hover", "dark", "hover", "group-hover",],
+    // textColor: ["hover", "dark", "hover", "active", "focus",],
+    // borderColor: ["hover", "dark", "hover", "active", "focus"],
 
   },
   plugins: [],
