@@ -1,12 +1,12 @@
 <template>
-  <div class="text-light-onSurface dark:text-dark-onSurface ">
+  <div class="text-light-onSurface dark:text-dark-onSurface">
     <header
-      class=" border-b dark:border-gray-500 bg-light-surface dark:bg-dark-surface transition-all ease-in-out duration-200 h-16 fixed z-30 top-0 right-0 w-full flex items-center"
+      class="border-b dark:border-gray-500 bg-light-surface dark:bg-dark-surface transition-all ease-in-out duration-200 h-16 fixed z-30 top-0 right-0 w-full flex items-center"
     >
-    <!-- border border-gray-300 -->
+      <!-- border border-gray-300 -->
       <nav
         id="navigation"
-        class=" flex-1  flex items-baseline max-w-screen-lg mx-auto px-6 xl:px-0 justify-between"
+        class="flex-1 flex items-baseline max-w-screen-lg mx-auto px-6 xl:px-0 justify-between"
       >
         <!-- logo -->
         <div class="">
@@ -19,9 +19,7 @@
                 class="absolute -top-6 left-0 h-8 w-full rounded-lg transform bg-gradient-to-tr from-amber-400 to-fuchsia-700"
               ></span>
             </div>
-            <h1 class="ml-2 text-2xl  font-bold">
-              Caribbeans
-            </h1>
+            <h1 class="ml-2 text-2xl font-bold">Caribbeans</h1>
           </nuxt-link>
         </div>
 
@@ -61,7 +59,9 @@
 
           <!--  -->
           <li class="">
-            <ColorModeCtrl/>
+            <div class="w-8 h-8 ">
+              <ColorModeCtrl  />
+            </div>
           </li>
         </ul>
       </nav>
